@@ -2,7 +2,8 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 public class FindElements {
-    public static void main(String[] args) throws Exception {
+    public static void findElements() throws Exception
+    {
         AppiumDriver driver = CreateDriverSession.initializeDriver();
 
         //Finding Elements using different Locator Strategies
