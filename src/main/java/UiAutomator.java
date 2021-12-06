@@ -3,7 +3,7 @@ import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileElement;
 
 public class UiAutomator {
-    public static void main(String[] args) throws Exception {
+    public static void UiAutomator() throws Exception {
         AppiumDriver driver = CreateDriverSession.initializeDriver();
 
         MobileElement element = (MobileElement) ((FindsByAndroidUIAutomator)driver)

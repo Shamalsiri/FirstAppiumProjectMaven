@@ -13,9 +13,9 @@ public class CreateDriverSession {
     public static AppiumDriver initializeDriver() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "10.0.0.223:3121");
+        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "192.168.1.107:3121");
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-        caps.setCapability(MobileCapabilityType.UDID, "10.0.0.223:3121");
+        caps.setCapability(MobileCapabilityType.UDID, "192.168.1.107:3121");
         caps.setCapability("newCommandTimeout", 300); //Extend the default session time out value from 60sec to 300
         caps.setCapability("appPackage","io.appium.android.apis" );
         caps.setCapability("appActivity", "io.appium.android.apis.ApiDemos"); // opens the API Demos Page
@@ -24,8 +24,8 @@ public class CreateDriverSession {
         String appUrl = projectRootFolder + File.separator + "src" + File.separator + "main" + File.separator
                 + "resources" + File.separator + "ApiDemos-debug.apk"; // use File.separator to make it system agnostic
 
-        //caps.setCapability("appActivity", "io.appium.android.apis.accessibility.CustomViewAccessibilityActivity"); //opens accessibility > custom view page
-        //caps.setCapability(MobileCapabilityType.APP, appUrl); // Commented out because we will be attempting to open a specific app activity
+//        caps.setCapability("appActivity", "io.appium.android.apis.accessibility.CustomViewAccessibilityActivity"); //opens accessibility > custom view page
+//        caps.setCapability(MobileCapabilityType.APP, appUrl); // Commented out because we will be attempting to open a specific app activity
 
         URL url = new URL("http://127.0.0.1:4723/wd/hub"); // http not https
         AppiumDriver driver = new AndroidDriver(url, caps);
